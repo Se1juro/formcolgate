@@ -10,4 +10,12 @@ module.exports = {
       });
     });
   },
+  async getRegisters() {
+    return new Promise((resolve, reject) => {
+      registerSchema.find({}).exec((err, doc) => {
+        if (err) reject(err);
+        return resolve(doc);
+      });
+    });
+  },
 };

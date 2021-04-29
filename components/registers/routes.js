@@ -6,6 +6,8 @@ const { validatePostError } = require("../../middlewares");
 const {
   validateContentDataRegister,
 } = require("../../middlewares/validateRegister");
+router.get("/", controller.getRegisters);
+router.get("/results", controller.getExcel);
 router.post(
   "/",
   validateContentDataRegister(),
